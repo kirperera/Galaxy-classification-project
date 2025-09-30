@@ -15,29 +15,28 @@ The pipeline will automatically download images of galaxies and prepare them for
 
 ## ⚙️ Project Structure
 
-galaxy-classification-project/
+galaxy-classification/
 │
 ├── data/
-│ ├── raw/ # Raw FITS images
-│ ├── processed/ # Converted PNG/JPEG, resized images
-│ └── labels.csv # Metadata and labels
+│   ├── raw/        # Raw FITS images from NASA SkyView
+│   ├── processed/  # Converted PNG/JPEG, resized
+│   └── labels.csv  # Metadata (object name, class label, survey info)
 │
 ├── notebooks/
-│ ├── 01_data_download.ipynb
-│ ├── 02_preprocessing.ipynb
-│ ├── 03_model_training.ipynb
-│ └── 04_evaluation_visualization.ipynb
+│   ├── 01_data_download.ipynb
+│   ├── 02_preprocessing.ipynb
+│   ├── 03_model_training.ipynb
+│   └── 04_evaluation_visualization.ipynb
 │
 ├── src/
-│ ├── data_loader.py
-│ ├── preprocess.py
-│ ├── model.py
-│ └── utils.py
+│   ├── data_loader.py     # Script to download FITS images
+│   ├── preprocess.py      # FITS → PNG, resizing, normalization
+│   ├── model.py           # CNN model (PyTorch / TensorFlow)
+│   └── utils.py           # Helper functions
 │
-├── environment.yml
-├── requirements.txt
-└── README.md
-
+├── environment.yml        # Conda environment (dependencies)
+├── README.md              # Project overview
+└── requirements.txt       # Pip dependencies
 
 🔧 Tools & Libraries
 - Python 3.13.5
